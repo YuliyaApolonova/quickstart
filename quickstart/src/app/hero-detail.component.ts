@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Location } from '@angular/common';
 import 'rxjs/add/operator/switchMap';
-
+import { Hero }         from './hero';
 import { HeroService } from './hero.service';
 
 @Component({
@@ -13,7 +13,7 @@ import { HeroService } from './hero.service';
 })
 
 export class HeroDetailComponent implements OnInit{
-
+  hero: Hero;
   constructor(
     private heroService: HeroService,
     private route: ActivatedRoute,
